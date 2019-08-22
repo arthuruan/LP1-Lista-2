@@ -15,8 +15,10 @@ class Horista : public Funcionario{
 
         void setSalarioPorHora(double sph);
         void setHorasTrabalhadas(double ht);
+        
+        void print();
 
-        double calcularSalario();
+        virtual double calcularSalario();
 
 };
 

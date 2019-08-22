@@ -24,6 +24,13 @@ void Assalariado::setSalario(double s){
     }
 }
 
-double Assalariado::calculaSalario(){
-    salario = salario;
+double Assalariado::calcularSalario(){
+    return salario;
+}
+
+void Assalariado::print(){
+    cout<< "\nAssalariado\n" << endl
+        << "Nome: " << nome << endl
+        << "Matricula: " << matricula << endl
+        << "Salario: " << salario << endl;
 }

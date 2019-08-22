@@ -11,8 +11,10 @@ class Assalariado : public Funcionario{
 
         double getSalario();
         void setSalario(double s);
+        
+        void print();
 
-        double calculaSalario();
+        virtual double calcularSalario();
 
 };
 

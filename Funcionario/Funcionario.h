@@ -16,8 +16,10 @@ class Funcionario{
 
         void setNome(string n);
         void setMatricula(int m);
+        
+        virtual void print();
 
-        virtual double calculaSalario() = 0;
+        virtual double calcularSalario() = 0;
 };
 
 #endif // FUNCIONARIO_H

@@ -28,3 +28,7 @@ void Funcionario::setMatricula(int m){
         matricula = m;
     }
 }
+
+void Funcionario::print(){
+
+}
