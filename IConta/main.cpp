@@ -5,6 +5,14 @@
 int main(void){
     Conta *c1 = new Conta("Arthur", 50, 512, 1000);
     ContaEspecial *c2 = new ContaEspecial("Ruan", 60, 215, 500);
+
+    try{
+        c1->sacar(1200);
+    }
+    catch(SaldoNaoDisponivelException e){
+        cerr << "Erro: " << e.what() << '\n';
+    }
+    
     
     c1->definirLimite();
     c1->print();
@@ -20,6 +28,7 @@ int main(void){
     c1->print();
 
     cout << endl << endl;
+
 ///Conta Especial
 
     c2->definirLimite();

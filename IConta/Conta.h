@@ -2,6 +2,7 @@
 #define CONTA_H
 #include <iostream>
 #include "IConta.h"
+#include "SaldoNaoDisponivelException.h"
 
 using namespace std;
 

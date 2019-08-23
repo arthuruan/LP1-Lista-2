@@ -4,6 +4,6 @@ ValorAbaixoException::ValorAbaixoException(){
 
 }
 
-string ValorAbaixoException::wath(){
+string ValorAbaixoException::what(){
     return erro;
 }

@@ -65,7 +65,11 @@ void Conta::definirLimite(){
 }
 
 void Conta::sacar(double valor){
-    saldo -= valor;
+    if(valor > saldo){
+        throw SaldoNaoDisponivelException();
+    }else{
+        saldo -= valor;
+    }
 }
 
 void Conta::depositar(double valor){

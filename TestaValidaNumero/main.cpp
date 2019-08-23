@@ -4,26 +4,21 @@ int main(void){
     
     TestaValidaNumero *t1 = new TestaValidaNumero();
 
-    try{
-        cout << "Lancando 50";
-        t1->validaNumero(50);
-        cout << "Lancando -5";
-        t1->validaNumero(-5);
-        cout << "Lancando 200";
-        t1->validaNumero(200);
-        cout << "Lancando 1200";
-        t1->validaNumero(1200);
-    }
-    catch(ValorAbaixoException e){
-        cerr << "Erro: " << e.what() << '\n';
-    }
-    catch(ValorAbaixoException e){
-        cerr << "Erro: " << e.what() << '\n';
-    }
-    catch(ValorMuitoAcimaException e){
-        cerr << "Erro: " << e.what() << '\n';
+    for(int i = 0; i < 1002; i += 500){
+        try{
+            cout << "\nLancando: " << i << endl;
+            t1->validaNumero(i);
+        }
+        catch(ValorAbaixoException e){
+            cerr << "Erro: " << e.what() << '\n';
+        }
+        catch(ValorAcimaException e){
+            cerr << "Erro: " << e.what() << '\n';
+        }
+        catch(ValorMuitoAcimaException e){
+            cerr << "Erro: " << e.what() << '\n';
+        }
     }
     
-
     return 0;
 }

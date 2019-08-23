@@ -7,10 +7,10 @@ using namespace std;
 
 class ValorAbaixoException : public exception{
     protected:
-        string erro = "Valor muito baixo";
+        string erro = "Valor baixo";
     public:
         ValorAbaixoException();
-        virtual string wath();
+        virtual string what();
 };
 
 #endif // VALORABAIXOEXCEPTION_H
